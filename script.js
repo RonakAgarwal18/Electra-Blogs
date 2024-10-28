@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const submitButton = document.querySelector("#submit");
-
-    // Only add the event listener if we're on the upload blog page
     if (submitButton) {
         submitButton.addEventListener("click", (event) => {
             event.preventDefault();
@@ -23,8 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
-    // Function to load blogs on the blog page
     const blogsContainer = document.getElementById('blogs-con');
     if (blogsContainer) {
         const blogs = JSON.parse(localStorage.getItem("blogs")) || [];
